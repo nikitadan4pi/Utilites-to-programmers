@@ -2,23 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Конвертер Markdown в HTML</title>
+    <title>Markdown to HTML Converter</title>
   </head>
   <body>
-    <h1>Конвертер Markdown в HTML</h1>
+    <h1>Markdown to HTML Converter</h1>
     <form>
-      <label for="markdown">Введите текст в формате Markdown:</label><br>
-      <textarea id="markdown" name="markdown" rows="10" cols="50"></textarea><br>
-      <button type="button" onclick="convert()">Конвертировать</button>
+      <label for="markdown">Markdown:</label>
+      <textarea id="markdown" name="markdown"></textarea>
     </form>
-    <h2>HTML:</h2>
-    <div id="html"></div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <hr>
+    <div id="preview"></div>
     <script>
-      function convert() {
-        const markdownText = document.getElementById("markdown").value;
-        const htmlText = marked(markdownText);
-        document.getElementById("html").innerHTML = htmlText;
+      function convertMarkdown() {
+        var markdown = document.getElementById("markdown").value;
+        var preview = document.getElementById("preview");
+        preview.innerHTML = marked(markdown);
       }
     </script>
   </body>
