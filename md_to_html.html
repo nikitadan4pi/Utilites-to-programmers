@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Markdown to HTML Converter</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
     <h1>Markdown to HTML Converter</h1>
     <form>
+<button type="button" onclick="convertMarkdown()">Convert</button>
       <label for="markdown">Markdown:</label>
       <textarea id="markdown" name="markdown"></textarea>
     </form>
     <hr>
     <div id="preview"></div>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       function convertMarkdown() {
         var markdown = document.getElementById("markdown").value;
