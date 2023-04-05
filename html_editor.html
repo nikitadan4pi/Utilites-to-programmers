@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -124,7 +123,7 @@ border: 1px solid black;
       cssFolder.file("style.css", document.getElementById("css").value);
 
       // Создаем index.html с введенным пользователем HTML
-      var html = "<html><head><link rel='stylesheet' href='css/style.css'></head><body>"+document.getElementById("html").value+"</body></html>";
+      var html = "<html><head><link rel='stylesheet' href='css/style.css'></head><body>"+document.getElementById("content").value+"</body></html>";
       zip.file("index.html", html);
 
       // Генерируем архив
